@@ -10,7 +10,7 @@ app = Flask(__name__)
 hdb = db.HubDatabase()
 
 
-@app.route('/')
+@app.route('/')  # main
 def get_home():
     sessions = hdb.get_sessions()
     sessions = list(map(lambda s: hike.to_list(s), sessions))
