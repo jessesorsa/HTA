@@ -50,12 +50,13 @@ class HubDatabase:
 
     def save(self, s: hike.HikeSession):
         sessions = self.get_sessions()
-
+        # skip this part, doesn't work after modifying
+        """
         if len(sessions) > 0:
             s.id = sorted(sessions, key=lambda sess: sess.id)[-1].id + 1
         else:
             s.id = 1
-
+        """
         try:
             self.lock.acquire()
 
