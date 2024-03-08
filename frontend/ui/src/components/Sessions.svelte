@@ -15,11 +15,11 @@
     };
 </script>
 
-<div class="hero p-10 flex flex-col items-start bg-light-grey-color">
+<div class="hero p-10 flex flex-col min-h-full items-start bg-light-grey-color">
     <div class="max-w-md">
         <h1 class="text-5xl font-bold">Welcome user!</h1>
         <div class="flex flex-row items-center">
-            <p class="py-5">Update your sessions list</p>
+            <p class="py-5">Update your hiking list here:</p>
             <button
                 class="btn btn-outline ml-3 btn-sm"
                 on:click={updateSessions}
