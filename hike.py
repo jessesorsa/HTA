@@ -21,7 +21,8 @@ def to_list(s: HikeSession) -> list:
 def from_list(l: list) -> HikeSession:
     s = HikeSession()
     s.id = l[0]
-    s.km = l[1]
+    # m to km
+    s.km = l[1] / 1000
     s.steps = l[2]
     s.kcal = l[3]
     return s
