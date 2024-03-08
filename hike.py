@@ -1,6 +1,15 @@
 MET_HIKING = 6
 KCAL_PER_STEP = 0.04
 
+# SOURCE GOOGLE
+AVG_HEIGHT_MALE = 178
+AVG_HEIGHT_HEIGHT = 164
+
+# SOURCE GOOGLE
+AVG_WEIGHT = 85
+AVG_WEIGHT = 67
+
+
 class HikeSession:
     id = 0
     km = 0
@@ -21,8 +30,7 @@ def to_list(s: HikeSession) -> list:
 def from_list(l: list) -> HikeSession:
     s = HikeSession()
     s.id = l[0]
-    # m to km
-    s.km = l[1] / 1000
+    s.km = l[1]
     s.steps = l[2]
     s.kcal = l[3]
     return s
