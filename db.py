@@ -88,8 +88,8 @@ class HubDatabase:
                 f"SELECT * FROM {DB_SESSION_TABLE['name']}").fetchall()
         finally:
             self.lock.release()
-
-        return list(map(lambda r: hike.from_list(r), rows))
+        print(rows)
+        return rows
 
     def get_session(self, session_id: int) -> hike.HikeSession:
         try:

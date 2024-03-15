@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask import render_template
 from flask import jsonify
 from flask import Response
@@ -7,21 +8,19 @@ import db
 import hike
 
 app = Flask(__name__)
+CORS(app)
 hdb = db.HubDatabase()
 
 
-@app.route('/')
+@app.route('/')  # main
 def get_home():
     sessions = hdb.get_sessions()
-    sessions = list(map(lambda s: hike.to_list(s), sessions))
     return jsonify(sessions)
 
 
 @app.route('/sessions')
 def get_sessions():
     sessions = hdb.get_sessions()
-    sessions = list(map(lambda s: hike.to_list(s), sessions))
-    print(sessions)
     return jsonify(sessions)
 
 
@@ -35,7 +34,7 @@ def get_session_by_id(id):
 def delete_session(id):
     hdb.delete(id)
     print(f'DELETED SESSION WITH ID: {id}')
-    return Response(status=202)
+    return jsonify({'message': f'Session with ID {id} has been deleted'})
 
 
 if __name__ == "__main__":
