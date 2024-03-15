@@ -39,7 +39,6 @@ declare module '$env/static/private' {
 	export const npm_config_global_prefix: string;
 	export const CONDA_SHLVL: string;
 	export const TERM_PROGRAM_VERSION: string;
-	export const CONDA_PROMPT_MODIFIER: string;
 	export const MallocNanoZone: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const COLOR: string;
@@ -60,7 +59,6 @@ declare module '$env/static/private' {
 	export const npm_config_userconfig: string;
 	export const npm_config_init_module: string;
 	export const __CFBundleIdentifier: string;
-	export const CONDA_PREFIX: string;
 	export const npm_command: string;
 	export const PWD: string;
 	export const npm_lifecycle_event: string;
@@ -83,7 +81,6 @@ declare module '$env/static/private' {
 	export const CONDA_PYTHON_EXE: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
-	export const CONDA_DEFAULT_ENV: string;
 	export const NVM_BIN: string;
 	export const npm_config_user_agent: string;
 	export const GIT_ASKPASS: string;
@@ -138,7 +135,6 @@ declare module '$env/dynamic/private' {
 		npm_config_global_prefix: string;
 		CONDA_SHLVL: string;
 		TERM_PROGRAM_VERSION: string;
-		CONDA_PROMPT_MODIFIER: string;
 		MallocNanoZone: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		COLOR: string;
@@ -159,7 +155,6 @@ declare module '$env/dynamic/private' {
 		npm_config_userconfig: string;
 		npm_config_init_module: string;
 		__CFBundleIdentifier: string;
-		CONDA_PREFIX: string;
 		npm_command: string;
 		PWD: string;
 		npm_lifecycle_event: string;
@@ -182,7 +177,6 @@ declare module '$env/dynamic/private' {
 		CONDA_PYTHON_EXE: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;
-		CONDA_DEFAULT_ENV: string;
 		NVM_BIN: string;
 		npm_config_user_agent: string;
 		GIT_ASKPASS: string;
