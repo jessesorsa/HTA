@@ -12,6 +12,8 @@ DB_SESSION_TABLE = {
         "km integer",
         "steps integer",
         "burnt_kcal integer",
+        "start_time text",
+        "duration text"
     ]
 }
 
@@ -50,18 +52,18 @@ class HubDatabase:
 
     def save(self, s: hike.HikeSession):
         sessions = self.get_sessions()
-
+        """
         if len(sessions) > 0:
             s.id = sorted(sessions, key=lambda sess: sess.id)[-1].id + 1
         else:
             s.id = 1
-
+        """     
         try:
             self.lock.acquire()
 
             try:
                 self.cur.execute(
-                    f"INSERT INTO {DB_SESSION_TABLE['name']} VALUES ({s.id}, {s.km}, {s.steps}, {s.kcal})")
+                    f"INSERT INTO {DB_SESSION_TABLE['name']} VALUES ({s.id}, {s.km}, {s.steps}, {s.kcal}, {s.start_time}, {s.duration})")
             except sqlite3.IntegrityError:
                 print(
                     "WARNING: Session ID already exists in database! Aborting saving current session.")
