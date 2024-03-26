@@ -1,4 +1,6 @@
 <script>
+    // component for showing the session totals
+
     import { sessionStore } from "../stores/store.svelte";
     const localSessionStore = sessionStore();
 </script>

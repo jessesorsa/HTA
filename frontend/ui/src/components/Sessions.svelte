@@ -1,14 +1,18 @@
 <script>
+    // component for the page layout, updating the sessions list,
+
     import SessionList from "./SessionList.svelte";
     import Stats from "./Stats.svelte";
     import { onMount } from "svelte";
     import { initStores, sessionStore } from "../stores/store.svelte";
     const localSessionStore = sessionStore();
 
+    // on mount the stored values are initialized
     onMount(async () => {
         await initStores();
     });
 
+    // update function
     const updateSessions = async () => {
         await initStores();
         localSessionStore.updateSessionTotals();

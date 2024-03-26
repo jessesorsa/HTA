@@ -1,3 +1,7 @@
+<script>
+    // navbar component at the top of the page
+</script>
+
 <div class="navbar bg-base-100 border-b border-neutral-content">
     <div class="navbar-start">
         <div class="dropdown">

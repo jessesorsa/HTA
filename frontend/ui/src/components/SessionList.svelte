@@ -1,4 +1,5 @@
 <script>
+    // component for the layout of the sessions table
     import SessionHead from "./SessionHead.svelte";
     import SessionBody from "./SessionBody.svelte";
 </script>

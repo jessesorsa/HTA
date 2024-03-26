@@ -1,3 +1,7 @@
+<script>
+    // footer component at the bottom of the page
+</script>
+
 <footer
     class="footer footer-center p-10 bg-base-100 border-t border-neutral-content text-base-content rounded"
 >
