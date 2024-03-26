@@ -39,6 +39,7 @@ watch subdirectory contains code for the watch.
 ### Dependencies
 
 **Bluetooth for Python**
+
 To install `pybluez` on an RPi for the Bluetooth connection, install the following dependencies.
 ```sh
 sudo apt-get install libbluetooth-dev
