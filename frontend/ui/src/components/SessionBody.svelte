@@ -1,4 +1,6 @@
 <script>
+    // component for listing the sessions, and deleting a specific session
+
     import { sessionStore } from "../stores/store.svelte";
     import * as Api from "../http-actions/sessionManagement";
     const localSessionStore = sessionStore();

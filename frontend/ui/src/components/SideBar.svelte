@@ -1,3 +1,7 @@
+<script>
+    // sidebar component at the left of the page
+</script>
+
 <div class="sidebar">
     <ul
         class="menu menu-sm p-10 w-30 min-h-full border-r border-neutral-content bg-base-100 text-base-content items-start"
