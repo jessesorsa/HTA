@@ -206,14 +206,12 @@ void loop(){
 
             bool exitSync = false;
 
-            // TODO CHECK THAT WATCH WORKS CORRECTLY IN BLUETOOTH SYNC / WELCOME SCREEN maybe add rtc draw above also
             //Bluetooth discovery
             while (1){
                 // display time here also!
                 watch->tft->drawString(rtc->formatDateTime(PCF_TIMEFORMAT_HMS) , 5, 10, 7);
 
                 
-                //TODO figure out how sync behaves in different situations
                 /* Bluetooth sync */
                 if (SerialBT.available()){
 

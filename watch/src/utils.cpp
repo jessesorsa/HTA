@@ -291,9 +291,9 @@ bool readLineAsSteps(fs::FS &fs, const char * path, uint32_t& steps){
     }
     Serial.println("- read from file:");
     if(file.available()) {
-        String line = file.readStringUntil('\n'); // Read until newline character
+        String line = file.readStringUntil('\n'); 
         file.close();
-        steps = line.toInt(); // Convert read line to integer
+        steps = line.toInt(); 
         return true;
     } else {
         Serial.println("- file is empty");
@@ -320,18 +320,18 @@ bool readLineAsDuration(fs::FS &fs, const char * path, int& duration){
     File file = fs.open(path);
     if(!file || file.isDirectory()){
         Serial.println("- failed to open file for reading");
-        return false; // Return -1 to indicate failure
+        return false; 
     }
 
     Serial.println("- read from file:");
     if(file.available()) {
-        String line = file.readStringUntil('\n'); // Read until newline character
+        String line = file.readStringUntil('\n'); 
         file.close();
         return parseTimeToSeconds(line, duration); 
     } else {
         Serial.println("- file is empty");
         file.close();
-        return false; // Return -1 if file is empty
+        return false; 
     }
 }
 
@@ -343,7 +343,7 @@ bool loadLastSession(fs::FS &fs, uint32_t& steps,  int& duration){
 
 bool Quectel_L76X_Probe(HardwareSerial* GNSS)
 {
-    // FROM TTGO watch examlpe
+    // FROM TTGO watch example there's probably redundant actions for time keeping only
     bool result = false;
     GNSS->write("$PCAS03,0,0,0,0,0,0,0,0,0,0,,,0,0*02\r\n");
     delay(5);
@@ -378,21 +378,22 @@ bool Quectel_L76X_Probe(HardwareSerial* GNSS)
 
 bool syncRTC(HardwareSerial *GNSS, TinyGPSPlus *gps, PCF8563_Class* rtc){
      
-     // updates rtc with gps date & time
+     // reads gps data from module
     while (GNSS->available()) {
         int r = GNSS->read();
         Serial.write(r);
         gps->encode(r);
     }
 
+    // if received sync rtc
     if(gps->time.isUpdated()){
-            // add correction for Helsinki time / summer time
-
+        // add correction for Helsinki time / summer time
         
         TimeChangeRule finEET = {"EET", Last, Sun, Mar,  3, +180}; // UTC+3
         TimeChangeRule finEEST = {"EEST", Last, Sun, Oct,  4, +120}; // UTC+2
         Timezone europeanEastern(finEET, finEEST);
-
+        
+        // translate time to unix time in seconds to use in timezone
         struct tm t_tm;
         t_tm.tm_hour = gps->time.hour();
         t_tm.tm_min = gps->time.minute();
