@@ -35,3 +35,4 @@ watch subdirectory contains code for the watch.
 ### Design report details current implementation and helps if you wish to understand it in more detail.
 
 ## Hub installation guide
+### Dependencies
