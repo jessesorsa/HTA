@@ -9,7 +9,7 @@ Authors: **Jesse Sorsa, Kalle Lindgren, Santeri Piironen, Zhibin Yan**.
 
 Hiking Tour Assistant is a system designed to promote outdoor activities by providing interesting insights into hiking sessions.
 
-HTA tracks user during a hiking session with a Smartwatch.
+HTA tracks users during a hiking session with a Smartwatch.
 Tracked items are steps, distance, and time taken during the hike. These are displayed to the user in real-time.
 Supported smartwatch is LILYGO T-WATCH 2020 V2.  
 
