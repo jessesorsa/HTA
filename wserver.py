@@ -24,12 +24,12 @@ def get_sessions():
     print(sessions)
     return jsonify(sessions)
 
-
+"""
 @app.route('/sessions/<id>')
 def get_session_by_id(id):
     session = hdb.get_session(id)
     return jsonify(hike.to_list(session))
-
+"""
 
 @app.route('/sessions/<id>/delete')
 def delete_session(id):
