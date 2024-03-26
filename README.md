@@ -13,7 +13,7 @@ HTA tracks user during a hiking session with a Smartwatch.
 Tracked items are steps, distance, and time taken during the hike. These are displayed to the user in real-time.
 Supported smartwatch is LILYGO T-WATCH 2020 V2.  
 
-HTA also provides the possibility of storing session data for later usage in a central hub.
+HTA also provides the possibility of storing session data for later usage in a central Hub.
 Sessions are synchronized to the Hub automatically when the Smartwatch is within the Hub's Bluetooth range.
 Saved sessions are processed to include the estimation of burned calories.
 Raspberry Pi 3b+ was used as the Hub.
@@ -25,7 +25,7 @@ This Web UI is hosted locally in the Hub and thus accessible in the same LAN as 
 
 ### Repo structure
 
-The main directory contains files needed to run the HUB.
+The main directory contains files needed to run the Hub.
 
 frontend subdirectory contains code for the Web UI.
 
