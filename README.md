@@ -25,14 +25,14 @@ This Web UI is hosted locally in the Hub and thus accessible in the same LAN as 
 
 ### Repo structure
 
-Main directory contains files needed for running the HUB.
+The main directory contains files needed to run the HUB.
 
 frontend subdirectory contains code for the Web UI.
 
 watch subdirectory contains code for the watch.
 
 ### See SRS for more information about the project requirements.
-### Design report details current implementation and helps if you wish to understand it in more detail.
+### The design report details the current implementation and helps if you wish to understand it in more detail.
 
 ## Hub installation guide
 
@@ -56,13 +56,11 @@ Assuming we are in the project folder; run the following:
 ### Installing the Hub
 
 ```bash
-git clones https://github.com/jessesorsa/HTA
+git clone https://github.com/jessesorsa/HTA
 ```
 
 ### Initializing the Hub
 ```bash
-git clones https://github.com/jessesorsa/HTA
-
 cd HTA
 bash HTA/run.sh
 ```
