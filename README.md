@@ -35,4 +35,33 @@ watch subdirectory contains code for the watch.
 ### Design report details current implementation and helps if you wish to understand it in more detail.
 
 ## Hub installation guide
+
 ### Dependencies
+
+**Bluetooth for Python**
+To install `pybluez` on an RPi for the Bluetooth connection, install the following dependencies.
+```sh
+sudo apt-get install libbluetooth-dev
+sudo apt-get install python-dev
+sudo pip install PyBluez
+```
+
+**Other dependencies**
+
+The necessary Python libraries can be installed from the `hub/requirements.txt` file.
+We assume that are in the project folder; run the following:
+`pip3 install -r hub/requirements.txt`
+
+### Installing the Hub
+
+```bash
+git clones https://github.com/jessesorsa/HTA
+```
+
+### Initializing the Hub
+```bash
+git clones https://github.com/jessesorsa/HTA
+
+cd HTA
+bash HTA/run.sh
+```
