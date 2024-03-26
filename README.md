@@ -49,7 +49,7 @@ sudo pip install PyBluez
 **Other dependencies**
 
 The necessary Python libraries can be installed from the `hub/requirements.txt` file.
-We assume that are in the project folder; run the following:
+Assuming we are in the project folder; run the following:
 `pip3 install -r hub/requirements.txt`
 
 ### Installing the Hub
